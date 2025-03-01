@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Google Fonts (Roboto est déjà inclus via Tailwind config) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Tailwind CSS Compiled Output -->
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="icon" type="image/png" href="images/petitlogo.png" />
+
+    <title>Sérénis</title>
+  </head>
+  <body class="bg-fondhh font-sans">
+    <!-- Header -->
+    <header class="bg-navfoohh site-navbar-target sticky top-0 z-50 shadow-md">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="site-logo">
+              <img src="images/Sérénis.png" width="120" alt="Sérénis Logo" class="h-auto" />
+            </a>
+          </div>
+
+          <!-- Navigation & Toggle -->
+          <div class="flex items-center">
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="lg:hidden text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-2"
+              aria-label="Toggle navigation"
+              id="menu-toggle"
+            >
+              <i class="fas fa-bars text-2xl text-bleu"></i>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex justify-end items-center space-x-8 text-p transition-all duration-300" role="navigation" id="main-nav">
+              <ul class="flex items-center space-x-6">
+                <li><a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Accueil</a></li>
+                <li class="font-bold"><a class="text-bleu hover:text-bleu/80 transition-colors duration-200" href="boutique.html">Notre boutique</a></li>
+                <li><a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="suiviIA.html">Suivi avec IA</a></li>
+                <li><a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Télémedecine</a></li>
+                <li><a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Service client</a></li>
+
+                <!-- Language Dropdown -->
+                <li class="relative group">
+                  <button
+                    class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="Sélectionner la langue"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </button>
+                  <div
+                    class="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-32 z-50 transform transition-all duration-200 opacity-0 group-hover:opacity-100"
+                  >
+                    <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+                    <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+                    <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+                  </div>
+                </li>
+
+                <!-- User Icon -->
+                <li>
+                  <a
+                    class="text-gray-800 hover:text-bleu transition-colors duration-200 p-1 focus:outline-none focus:ring-2 focus:ring-bleu/50 rounded"
+                    href="login.html"
+                    aria-label="Connexion"
+                  >
+                    <i class="fas fa-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav
+          class="lg:hidden hidden flex-col space-y-4 text-p bg-fond shadow-inner mt-4 p-4 rounded-b-lg transition-all duration-300"
+          id="mobile-nav"
+          role="navigation"
+        >
+          <a class="text-gray-800 hover:text-bleu" href="#">Accueil</a>
+          <a class="text-gray-800 hover:text-bleu" href="boutique.html">Notre boutique</a>
+          <a class="text-gray-800 hover:text-bleu" href="suiviIA.html">Suivi avec IA</a>
+          <a class="text-gray-800 hover:text-bleu" href="#">Télémedecine</a>
+          <a class="text-gray-800 hover:text-bleu" href="#">Service client</a>
+          <div class="relative">
+            <button
+              class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Sélectionner la langue"
+              id="mobile-lang-toggle"
+            >
+              <i class="fas fa-globe mr-2"></i> Langue
+            </button>
+            <div
+              class="hidden flex-col bg-white shadow-lg rounded mt-2 py-2 w-full z-50 transition-all duration-200"
+              id="mobile-lang-menu"
+            >
+              <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+              <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+              <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+            </div>
+          </div>
+          <a class="text-gray-800 hover:text-bleu" href="login.html">
+            <i class="fas fa-user mr-2"></i> Connexion
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Script pour la navigation mobile -->
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileNav.classList.toggle('hidden');
+        mobileNav.classList.toggle('flex');
+      });
+
+      document.getElementById('mobile-lang-toggle').addEventListener('click', () => {
+        const mobileLangMenu = document.getElementById('mobile-lang-menu');
+        mobileLangMenu.classList.toggle('hidden');
+        mobileLangMenu.classList.toggle('flex');
+      });
+    </script>
+
+    <!-- Cadre vert en haut avec le chemin et le titre -->
+    <div class="bg-verthh">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+        <nav aria-label="breadcrumb">
+          <ol class="flex space-x-2 text-white text-p">
+            <li><a href="suiviIA.html" class="hover:text-bleu">Suivi avec IA</a></li>
+            <li><a href="#" class="hover:text-bleu">Score de santé</a></li>
+            <li><a href="#" class="hover:text-bleu">Bilan</a></li>
+            <li class="text-gray-300" aria-current="page">Taux de Calcium</li>
+          </ol>
+        </nav>
+        <br />
+        <h1 class="text-h1 font-bold text-white">Taux de Calcium</h1>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- Contenu principal -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Section Résultat (cadre blanc) -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex justify-between items-start">
+            <!-- Partie gauche -->
+            <div>
+              <h2 class="text-h2 font-semibold">Votre résultat :</h2>
+              <h4 class="text-h2 font-bold">8,3 mg/dl</h4>
+              <p class="text-p mt-2">
+                <strong>Valeur normale :</strong> <span class="text-gray-700">8,8 - 10,6 mg/dl</span>
+              </p>
+            </div>
+
+            <!-- Partie droite (Icône et barre rouge) -->
+            <div class="flex flex-col items-center">
+              <img src="images/os.png" alt="Icône d'os" width="80px" class="mb-2" />
+              <div class="w-16 h-2 mt-4 bg-red-600 rounded"></div>
+            </div>
+          </div>
+
+          <!-- Graphique en dessous -->
+          <img src="images/graphe.jpg" alt="Graphe de votre taux de Calcium" class="mt-4 w-full" />
+        </div>
+
+        <!-- Section Explication (à droite) -->
+        <div class=" p-6">
+          <h2 class="text-h2 font-bold pb-4">Le test calcium sérique</h2>
+          <p class="text-p mt-2 text-gray-700">
+            Le test calcium sérique mesure les formes libres et liées du calcium dans le sang. Des niveaux anormaux (trop élevés ou trop faibles) peuvent indiquer des troubles comme :
+          </p>
+          <ul class="text-p mt-2 space-y-2 text-gray-700">
+            <li><strong>Faible calcium :</strong> Problème d'absorption, maladies osseuses, rénales ou hépatiques.</li>
+            <li><strong>Calcium élevé :</strong> Favorisez les aliments riches en calcium (produits laitiers, légumes verts).</li>
+          </ul>
+          <p class="text-p mt-2 text-gray-700">
+            <strong>Amélioration de la santé :</strong> Favorisez les aliments riches en calcium (produits laitiers, légumes verts).
+          </p>
+          <p class="text-p mt-2 text-gray-700 pb-4">Consultez un médecin pour envisager des suppléments si nécessaire.</p>
+
+          <!-- Boutons d'action -->
+   
+          
+          <div class="mt-4 flex justify-end space-x-4">
+            <a href="#"
+              class="border-2 border-orangehh text-orangehh px-6 py-2 rounded-lg hover:bg-orangehh/10  font-medium transition-colors duration-200"
+            >
+            Retourner au bilan
+
+            </a>
+            <a href="Paiement.html"
+              class="bg-orangehh text-navfoohh px-6 py-2 rounded-lg hover:bg-orangehh/80  font-medium transition-colors duration-200"
+            >
+            Conseils Nutritionnels
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navfoohh py-8">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+          <!-- Section À propos de Sérénis, prend 5/12 de l'espace sur les grands écrans -->
+          <div class="lg:col-span-5 space-y-4">
+            <h4 class="text-h2 font-bold">À propos de Sérénis</h4>
+            <p class="text-p text-black">
+              Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
+              <a href="#"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
+              <a href="#"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
+              <a href="#"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+            </div>
+          </div>
+
+          <!-- Section Nos services, prend 3/12 de l'espace sur les grands écrans -->
+          <div class="lg:col-span-3">
+            <h4 class="text-h2 font-bold">Nos services</h4>
+            <ul class="text-p space-y-2">
+              <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
+            </ul>
+          </div>
+
+          <!-- Section Logo, prend 4/12 de l'espace sur les grands écrans -->
+          <div class="lg:col-span-4 flex items-center justify-center">
+            <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
