@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Google Fonts ( Roboto est déjà inclus via Tailwind config ) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="public/style.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Tailwind CSS Compiled Output -->
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="icon" type="image/png" href="images/petitlogo.png" />
+
     <title>Sérénis</title>
   </head>
-  <body class="font-sans bg-fondhh text-black">
+  <body class="bg-fondhh font-sans">
     <!-- Header -->
     <header class="bg-navfoohh site-navbar-target sticky top-0 z-50 shadow-md">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
@@ -125,97 +137,152 @@
         </nav>
       </div>
     </header>
-    <!-- Breadcrumb -->
-    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
-      <div class="container mx-auto px-4">
-        <nav aria-label="breadcrumb">
-          <ol class="flex flex-wrap space-x-2 text-p ">
-            <li><a href="#" class="hover:text-orangehh">Suivi avec IA</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Score de santé</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Bilan</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Taux de Calcium</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Nos recettes</a></li>
-            <li>></li>
-            <li class="text-black">Détails de la recette</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
 
-    <!-- Main Section -->
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center flex-col lg:flex-row">
-        <h1 class="text-h1 font-bold ">Détails de la Recette</h1>
-        <div class="flex items-center mt-4 lg:mt-0">
-          <input type="text" class="border border-gray-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
-          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
-            <i class="fas fa-search"></i>
-          </button>
+    <!-- Script pour la navigation mobile -->
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileNav.classList.toggle('hidden');
+        mobileNav.classList.toggle('flex');
+      });
+
+      document.getElementById('mobile-lang-toggle').addEventListener('click', () => {
+        const mobileLangMenu = document.getElementById('mobile-lang-menu');
+        mobileLangMenu.classList.toggle('hidden');
+        mobileLangMenu.classList.toggle('flex');
+      });
+    </script>
+
+    
+
+    <!-- Main Content Container -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <!-- Header -->
+      <div class="py-4">
+        <div class="container mx-auto px-4">
+          <nav aria-label="breadcrumb">
+            <ol class="flex space-x-2 text-gray-600 text-p">
+              <li><a href="boutique.html" class="hover:text-bleu">Notre Boutique > </a></li>
+              <li class="text-gray-400" aria-current="page">Détails du produit</li>
+            </ol>
+          </nav>
         </div>
       </div>
 
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="col-span-1">
-          <img src="images/croissant.jpg" alt="Croissant au saumon et à l'œuf poché" class="w-full rounded-lg" />
+      <!-- Product Details Section -->
+      <section class="container mx-auto mt-4 px-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+          <h1 class="text-h1 font-bold">Détails du produit</h1>
+          <div class="mt-4 md:mt-0 flex items-center space-x-2">
+            <input
+              type="text"
+              class="border border-gray-300 rounded-l-md px-4 py-2 text-p focus:outline-none focus:ring-2 focus:ring-bleu"
+              placeholder="Rechercher..."
+              aria-label="Search"
+            />
+            <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-bleu/90">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-span-1">
-          <h1 class="text-h1 ">Croissant au saumon et à l'œuf poché</h1>
-          <p class="text-p  mt-2">
-            <span class="mr-4"><i class="fa fa-clock mr-1"></i> 15 Min</span>
-            <span class="mr-4"><i class="fa fa-fire mr-1"></i> 220 Cal</span>
-            <span><i class="fa fa-check mr-1"></i> Facile</span>
-          </p>
-        </div>
-        <div class="col-span-1">
-         
-          <div class="border-2 border-verthh bg-verthh p-4 rounded-lg">
-            <h2 class="text-h2 text-white">Ingrédients</h2>
-            <br>
-            <ul class="text-p space-y-2">
-              <li class="flex justify-between text-white"><span>Croissant</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Oeuf</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Saumon</span><span>100 g</span></li>
-              <li class="flex justify-between text-white"><span>Concombre</span><span>1/4</span></li>
-              <li class="flex justify-between text-white"><span>Fromage Blanc</span><span>20 g</span></li>
-              <li class="flex justify-between text-white"><span>Poivre et Sel</span><span>1 pincée</span></li>
-              <li class="flex justify-between text-white"><span>Aneth</span><span>1 brin</span></li>
-            </ul>
+      </section>
+
+      <!-- Product Container -->
+      <div class="container mx-auto p-4 mt-4">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <!-- Product Image and Info -->
+          <div class="md:col-span-5 bg-bleuhh text-white rounded-lg p-6 text-center shadow-lg">
+            <h2 class="text-h2 font-semibold">Bague connectée</h2>
+            <img src="images/bague.jpg" alt="Bague connectée" class="w-full mt-4 rounded-md" />
+            <div class="flex justify-between items-center mt-4">
+              <h3 class="text-h3">120.00 DT</h3>
+              <div class="flex items-center space-x-2">
+                <button class="bg-bleu text-white w-8 h-8 rounded-full hover:bg-bleu/90">-</button>
+                <span class="text-h3">0</span>
+                <button class="bg-bleu text-white w-8 h-8 rounded-full hover:bg-bleu/90">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spacer -->
+          <div class="md:col-span-1 hidden md:block"></div>
+
+          <!-- Product Details -->
+          <div class="md:col-span-6">
+            <h3 class="text-h3 font-semibold mt-3">Choisissez votre couleur</h3>
+            <div class="flex justify-between max-w-md mt-2">
+              <button class="w-20 h-10 bg-gray-500 rounded-lg hover:ring-2 hover:ring-bleu"></button>
+              <button class="w-20 h-10 bg-amber-700 rounded-lg hover:ring-2 hover:ring-bleu"></button>
+              <button class="w-20 h-10 bg-black rounded-lg hover:ring-2 hover:ring-bleu"></button>
+            </div>
+            <div class="flex justify-between max-w-md text-p text-gray-700 mt-1">
+              <p>Argent</p>
+              <p>Bronze</p>
+              <p>Black</p>
+            </div>
+
+            <h3 class="text-h3 font-semibold mt-4">Description du produit</h3>
+            <p class="text-p text-gray-700 mt-2">
+              Cette bague élégante et discrète intègre un capteur intelligent pour suivre vos données de santé et d'activité.
+            </p>
+            <p class="text-p text-gray-700 mt-2">
+              Parfaite pour ceux qui recherchent un suivi en continu sans compromis sur le style.
+            </p>
+
+            <div class="mt-4 flex justify-end space-x-4">
+              <a href="#"
+                class="border-2 border-orangehh text-orangehh px-6 py-2 rounded-lg hover:bg-orangehh/10 font-medium transition-colors duration-200"
+              >
+                Consulter
+              </a>
+              <a href="Paiement.html"
+                class="bg-orangehh text-navfoohh px-6 py-2 rounded-lg hover:bg-orangehh/80 font-medium transition-colors duration-200"
+              >
+                Acheter
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
-          <iframe
-            class="w-full h-[385px] rounded-lg"
-            src="https://www.youtube.com/embed/Z_Le6jBg21I?si=oyXaQlaa3dax1WIG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <h2 class="text-h2 ">Recette</h2>
-          <br>
-          <ol class="list-decimal text-p pl-5 space-y-2 text-black">
-            <li>Tartiner le croissant de fromage à la crème</li>
-            <li>Disposer dessus les tranches de saumon</li>
-            <li>Ajouter du sel à l’eau bouillante</li>
-            <li>Faire cuire l'œuf pendant 1.5 minutes</li>
-            <li>Placer l'œuf poché dans une assiette, saupoudrer de mélange de graines ou de micropousses</li>
-          </ol>
+      <!-- Customer Reviews -->
+      <div class="bg-vert container mx-auto px-4 mt-8 max-w-2xl">
+        <div class="bg-verthh p-6 rounded-lg shadow-md">
+          <h2 class="text-h2 font-bold text-white">Avis des clients</h2>
+
+          <div class="bg-fondhh mt-4 border-b pb-4 p-4">
+            <div class="flex justify-between items-center">
+              <h5 class="text-h3 font-semibold">Excellent produit !!</h5>
+              <span class="text-yellow-400 text-p">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-p text-gray-700 mt-2">
+              Élégante et discrète, elle permet un suivi précis de mes données de santé sans compromis sur le style. L'application est intuitive et les analyses sont fiables. Un bijou technologique que je recommande sans hésitation !
+            </p>
+          </div>
+
+          <div class="bg-fondhh mt-4 border-b pb-4 p-4">
+            <div class="flex justify-between items-center">
+              <h5 class="text-h3 font-semibold">Une bague élégante!</h5>
+              <span class="text-yellow-400 text-p">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-p text-gray-700 mt-2">
+              Très belle bague, discrète et élégante. Le suivi des données de santé est précis et l’application facile à utiliser. Seul petit bémol, l’autonomie pourrait être légèrement améliorée. Malgré cela, c’est un excellent produit que je recommande !
+            </p>
+          </div>
+
+          <div class="bg-fondhh mt-4 p-4">
+            <div class="flex justify-between items-center">
+              <h5 class="text-h3 font-semibold">Incroyable et très élégante</h5>
+              <span class="text-yellow-400 text-p">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-p text-gray-700 mt-2">
+              Élégante et discrète, elle permet un suivi précis de mes données de santé sans compromis sur le style. L'application est intuitive et les analyses sont fiables. Un bijou technologique que je recommande sans hésitation !
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    
 <!-- Footer -->
 <footer class="bg-navfoohh py-8">
   <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
@@ -251,20 +318,9 @@
   </div>
 </footer>
 
-    <!-- Mobile Menu Script -->
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileNav = document.getElementById("mobile-nav");
-      const mobileLangToggle = document.getElementById("mobile-lang-toggle");
-      const mobileLangMenu = document.getElementById("mobile-lang-menu");
 
-      menuToggle.addEventListener("click", () => {
-        mobileNav.classList.toggle("hidden");
-      });
 
-      mobileLangToggle.addEventListener("click", () => {
-        mobileLangMenu.classList.toggle("hidden");
-      });
-    </script>
+
+ 
   </body>
 </html>

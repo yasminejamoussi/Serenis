@@ -1,330 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-  
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="images/petitlogo.png">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <link rel="icon" type="image/png" href="images/petitlogo.png" />
     <title>Sérénis</title>
   </head>
- 
-
-
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
+  <body class="font-sans bg-fondhh text-black">
+    <!-- Header -->
+   <!-- Header -->
+   <header class="bg-navfoohh site-navbar-target sticky top-0 z-50 shadow-md">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="site-logo">
+            <img src="images/Sérénis.png" width="120" alt="Sérénis Logo" class="h-auto" />
+          </a>
         </div>
-        <div class="site-mobile-menu-body"></div>
+
+        <!-- Navigation & Toggle -->
+        <div class="flex items-center">
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="lg:hidden text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-2"
+            aria-label="Toggle navigation"
+            id="menu-toggle"
+          >
+            <i class="fas fa-bars text-2xl text-bleu"></i>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex justify-end items-center space-x-8 text-p transition-all duration-300"
+            role="navigation"
+            id="main-nav"
+          >
+            <ul class="flex items-center space-x-6">
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Accueil</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="boutique.html">Notre boutique</a>
+              </li>
+              <li>
+                <a class="text-bleu font-bold hover:text-bleu/80 transition-colors duration-200" href="suiviIA.html">Suivi avec IA</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Télémedecine</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Service client</a>
+              </li>
+
+              <!-- Language Dropdown -->
+              <li class="relative group">
+                <button
+                  class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="Sélectionner la langue"
+                >
+                  <i class="fas fa-globe"></i>
+                </button>
+                <div
+                  class="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-32 z-50 transform transition-all duration-200 opacity-0 group-hover:opacity-100"
+                >
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+                </div>
+              </li>
+
+              <!-- User Icon -->
+              <li>
+                <a
+                  class="text-gray-800 hover:text-bleu transition-colors duration-200 p-1 focus:outline-none focus:ring-2 focus:ring-bleu/50 rounded"
+                  href="login.html"
+                  aria-label="Connexion"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
+      <!-- Mobile Navigation (Hidden by Default) -->
+      <nav
+        class="lg:hidden hidden flex-col space-y-4 text-p bg-fond shadow-inner mt-4 p-4 rounded-b-lg transition-all duration-300"
+        id="mobile-nav"
+        role="navigation"
+      >
+        <a class="text-gray-800 hover:text-bleu" href="#">Accueil</a>
+        <a class="text-gray-800 hover:text-bleu" href="boutique.html">Notre boutique</a>
+        <a class="text-bleu font-bold hover:text-bleu/80" href="suiviIA.html">Suivi avec IA</a>
+        <a class="text-gray-800 hover:text-bleu" href="#">Télémedecine</a>
+        <a class="text-gray-800 hover:text-bleu" href="#">Service client</a>
+        <div class="relative">
+          <button
+            class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="Sélectionner la langue"
+            id="mobile-lang-toggle"
+          >
+            <i class="fas fa-globe mr-2"></i> Langue
+          </button>
+          <div
+            class="hidden flex-col bg-white shadow-lg rounded mt-2 py-2 w-full z-50 transition-all duration-200"
+            id="mobile-lang-menu"
+          >
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+          </div>
+        </div>
+        <a class="text-gray-800 hover:text-bleu" href="login.html">
+          <i class="fas fa-user mr-2"></i> Connexion
+        </a>
+      </nav>
+    </div>
+  </header>
 
+    <!-- Breadcrumb -->
+    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
+      <div class="container mx-auto px-4">
+        <nav aria-label="breadcrumb">
+          <ol class="flex flex-wrap space-x-2 text-p text-bleuhh">
+            <li class="text-black">Notre Boutique</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
 
-      <header style="background: #FFF3D9 ;" class="site-navbar site-navbar-target" role="banner">
-        <div class="container">
-          <div class="row align-items-center position-relative">
+    <!-- Main Section 1 -->
+    <section class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex justify-between items-center flex-col lg:flex-row">
+        <h3 class="text-h3 ">Filtre</h3>
+        <h1 class="text-h1 font-bold ">Notre Boutique</h1>
+        <div class="flex items-center mt-4 lg:mt-0">
+          <input type="text" class="border border-grey-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
+          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
 
-            <div class="col-3">
-              <div class="site-logo">
-                <img src="images\Sérénis.png" width="120px">
-              </div>
+      <div class="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Filters -->
+        <div class="lg:col-span-3">
+          <div class="border-2 border-black bg-white p-4 rounded-lg">
+            <div class="space-y-2">
+              <label class="flex items-center text-p ">
+                <input type="checkbox" class="mr-2" /> Disponible
+              </label>
+              <label class="flex items-center text-p ">
+                <input type="checkbox" class="mr-2" /> Equipement
+              </label>
+              <label class="flex items-center text-p ">
+                <input type="checkbox" class="mr-2" /> Capteur
+              </label>
             </div>
-
-            <div class="col-9  text-right">
-              
-
-              <span class="d-inline-block d-lg-none"><a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-white"></span></a></span>
-
-
-              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                    <li ><a class="nav-link" href="#">Accueil</a></li>
-                    <li class="active"><a class="nav-link" href="boutique.html">Notre boutique</a></li>
-                    <li ><a class="nav-link" href="suiviIA.html">Suivi avec IA</a></li>
-                    <li><a class="nav-link" href="#">Télémedecine</a></li>
-                    <li><a class="nav-link" href="#">Service client</a></li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-globe"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <a class="dropdown-item" href="#">Français</a>
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">Español</a>
-                        </div>
-                    </li>
-            
-                    <li>
-                        <a class="nav-link" href="login.html">
-                            <i class="fas fa-user"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            </div>
-
-            
           </div>
         </div>
 
-      </header>
-
-
-
-      <body>
-        <div class="header">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item" aria-current="page">Notre Boutique</li>
-                    </ol>
-                </nav>
+        <!-- Products -->
+        <div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="detailsBoutique.html">
+            <div class="bg-bleuhh rounded-lg shadow-md overflow-hidden">
+              <img src="images/capt.jpg" alt="Capteur intelligent" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h4 class="text-h3 text-white">Capteur intelligent</h4>
+                <p class="text-p text-white">50,00 DT</p>
+                <hr class="border-white/50 my-2" />
+                <div class="flex justify-between items-center">
+                  <p class="text-p text-white">Disponible</p>
+                  <div class="flex space-x-1 text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
             </div>
+          </a>
+          <a href="detailsBoutique.html">
+            <div class="bg-bleuhh rounded-lg shadow-md overflow-hidden">
+              <img src="images/bague.jpg" alt="Bague connectée" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h4 class="text-h3 text-white">Bague connectée</h4>
+                <p class="text-p text-white">100,00 DT</p>
+                <hr class="border-white/50 my-2" />
+                <div class="flex justify-between items-center">
+                  <p class="text-p text-white">Disponible</p>
+                  <div class="flex space-x-1 text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-    
-        <section class="container mt-4">
-            <div class="breadcrumb-container">
-                <div><h3>Filtre</h3></div>
-                <h1>Notre Boutique</h1> <!-- H1 inchangé -->
-                <div class="search-bar"> <!-- Barre de recherche inchangée -->
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Rechercher..." aria-label="Search">
-                        <button class="btn btn-secondary" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="row mt-4">
-                <!-- Colonne Filtre -->
-                <div class="col-lg-3">
-                    <div class="list-group"  >
-                        <label class="list-group-item">
-                            <input type="checkbox"> Disponible
-                        </label>
-                        <label class="list-group-item">
-                            <input type="checkbox"> Equipement
-                        </label>
-                        <label class="list-group-item">
-                            <input type="checkbox"> Capteur
-                        </label>
-                    </div>
-                    
-                </div>
-    
-                <!-- Cartes Produits -->
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-md-6">
-                          <a href="detailsBoutique.html">
-                            <div class="card">
-                                <img class="card-img-top" src="images/capt.jpg" alt="Capteur intelligent">
-                                <div class="card-body">
-                                    <h4 class="text-white">Capteur intelligent</h4>
-                                    <p class="text-white">50,00 DT</p>
-                                   <hr>
-                                   <div class="d-flex justify-content-between" style="gap: 10px;"> 
-                                    <p class="text-white"> Disponible</p>
-                                   <div class="stars">
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                  </div></div>
-                                </div>
-                            </div>
-                        </div>
-                      </a>
+      </div>
+    </section>
 
+    <!-- Main Section 2 -->
+    <section class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Filters (Empty) + Image -->
+        <div class="lg:col-span-3">
+        
+          <img src="images/boutiquee.png" alt="Image sous le filtre" class="w-full mt-3" />
+        </div>
 
-                      
-                        <div class="col-md-6">
-                          <a href="detailsBoutique.html">
-                            <div class="card">
-                                <img class="card-img-top" src="images/bague.jpg" alt="Capteur intelligent">
-                                <div class="card-body">
-                                    <h4 class="text-white">Bague connectée</h4>
-                                    <p class="text-white">100,00 DT</p>
-                                   <hr>
-                                   <div class="d-flex justify-content-between" style="gap: 10px;"> 
-                                    <p class="text-white"> Disponible</p>
-                                   <div class="stars">
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                    <i class="fa fa-star gold"></i>
-                                  </div></div>
-                                  
-                                </div>
-                            </div>
-                        </div>
-                      </a>
-                       
-            </div> <!-- Fin Row -->
-        </section>
-
-        <section class="container mt-4">
-          
-          <div class="row mt-4">
-              <!-- Colonne Filtre -->
-              <div class="col-lg-3">
-                  <div class="list-group"  >
-                     
+        <!-- Products -->
+        <div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="detailsBoutique.html">
+            <div class="bg-bleuhh rounded-lg shadow-md overflow-hidden">
+              <img src="images/brac.jpg" alt="Bracelet connecté" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h4 class="text-h3 text-white">Bracelet connecté</h4>
+                <p class="text-p text-white">150,00 DT</p>
+                <hr class="border-white/50 my-2" />
+                <div class="flex justify-between items-center">
+                  <p class="text-p text-white">Disponible</p>
+                  <div class="flex space-x-1 text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                   </div>
-                  <!-- Image sous le filtre -->
-                  <img src="images/boutiquee.png" alt="Image sous le filtre" class="img-fluid mt-3">
+                </div>
               </div>
-  
-              <!-- Cartes Produits -->
-              <div class="col-lg-9">
-                  <div class="row">
-                      <div class="col-md-6">
-                        <a href="detailsBoutique.html">
-                          <div class="card">
-                              <img class="card-img-top" src="images/brac.jpg" alt="Capteur intelligent">
-                              <div class="card-body">
-                                  <h4 class="text-white">Bracelet connecté</h4>
-                                  <p class="text-white">150,00 DT</p>
-                                 <hr>
-                                 <div class="d-flex justify-content-between" style="gap: 10px;"> 
-                                  <p class="text-white"> Disponible</p>
-                                 <div class="stars">
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                </div></div>
-                                
-                              </div>
-                          </div>
-                      </div>
-                    </a>
-
-                      <div class="col-md-6">
-                        <a href="detailsBoutique.html">
-                          <div class="card">
-                              <img class="card-img-top" src="images/collier.png" alt="Capteur intelligent">
-                              <div class="card-body">
-                                  <h4 class="text-white">Collier connectée</h4>
-                                  <p class="text-white">150,00 DT</p>
-                                 <hr>
-                                 <div class="d-flex justify-content-between" style="gap: 10px;"> 
-                                  <p class="text-white"> Disponible</p>
-                                 <div class="stars">
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                  <i class="fa fa-star gold"></i>
-                                </div></div>
-                                
-                              </div>
-                          </div>
-                      </div>
-                    </a>
-                     
-          </div> <!-- Fin Row -->
-      </section>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-     
-
-
-
-
-
-
-
-
-
-
-     
-        <footer class=" text-md-start" style="background-color: #FFF3D9;">
-          <!-- Grid container -->
-          <div class="container p-4">
-            <!--Grid row-->
-            <div class="row">
-              <!--Grid column-->
-              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                  <h4 class="fw-bold">À propos de Sérénis</h4>
-                  <p class="text-body">
-                    Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée.                    </p>
-                  <div class="social-icons d-flex justify-content-around">
-                    
-                      <a href="#" class="me-3"><img src="images/facebook.png" alt="Facebook" width="30"></a>
-                      <a href="#" class="me-3"><img src="images/instagram.png" alt="Instagram" width="30"></a>
-                      <a href="#" class="me-3"><img src="images/twitter.png" alt="Twitter" width="30"></a>
-                      <a href="#" class="me-3"><img src="images/tiktok.png" alt="Tiktok" width="30"></a>
-                  </div>
-
-              </div>
-              <!--Grid column-->
-      
-              <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h4 class="fw-bold">Nos services</h4>
-      
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-body">Soins Médicaux à Domicile</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-body">Transport Médical Adapté</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-body">Plateforme de Télémédecine</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-body">Calendrier d'Activités Sociales</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-      
-              <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0  d-flex align-items-center justify-content-center">
-                  <img src="images/Sérénis.png" alt="Logo Sérénis" width="320px">
-              </div>
-              <!--Grid column-->
             </div>
-            <!--Grid row-->
-          </div>
-    
-        </footer>
+          </a>
+          <a href="detailsBoutique.html">
+            <div class="bg-bleuhh rounded-lg shadow-md overflow-hidden">
+              <img src="images/collier.png" alt="Collier connectée" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h4 class="text-h3 text-white">Collier connectée</h4>
+                <p class="text-p text-white">150,00 DT</p>
+                <hr class="border-white/50 my-2" />
+                <div class="flex justify-between items-center">
+                  <p class="text-p text-white">Disponible</p>
+                  <div class="flex space-x-1 text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  
-
-  
+    <!-- Footer -->
+   
+<!-- Footer -->
+<footer class="bg-navfoohh py-8">
+  <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Section À propos de Sérénis, prend 5/12 de l'espace sur les grands écrans -->
+    <div class="lg:col-span-5 space-y-4">
+      <h4 class="text-h2 font-bold">À propos de Sérénis</h4>
+      <p class="text-p text-black">
+        Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée. 
+      </p>
+      <div class="flex space-x-4 mt-4">
+        <a href="#"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
+        <a href="#"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+      </div>
+    </div>
     
+    <!-- Section Nos services, prend 3/12 de l'espace sur les grands écrans -->
+    <div class="lg:col-span-3">
+      <h4 class="text-h2 font-bold">Nos services</h4>
+      <ul class="text-p space-y-2">
+        <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
+        <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
+        <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
+        <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
+      </ul>
+    </div>
     
+    <!-- Section Logo, prend 4/12 de l'espace sur les grands écrans -->
+    <div class="lg:col-span-4 flex items-center justify-center">
+      <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+    </div>
+  </div>
+</footer>
+    <!-- Mobile Menu Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+      const mobileLangToggle = document.getElementById("mobile-lang-toggle");
+      const mobileLangMenu = document.getElementById("mobile-lang-menu");
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/main.js"></script>
+      menuToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+
+      mobileLangToggle.addEventListener("click", () => {
+        mobileLangMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
