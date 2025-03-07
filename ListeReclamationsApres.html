@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sérénis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/style.css" />
+</head>
+<body class="bg-yellow-100 font-roboto">
+    <!-- Header -->
+  <header class="bg-navfoohh site-navbar-target sticky top-0 z-50 shadow-md" role="banner">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="site-logo">
+            <img src="images/Sérénis.png" width="120" alt="Sérénis Logo" class="h-auto" />
+          </a>
+        </div>
+
+        <!-- Navigation & Toggle -->
+        <div class="flex items-center">
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="lg:hidden text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-2"
+            aria-label="Toggle navigation"
+            id="menu-toggle"
+          >
+            <i class="fas fa-bars text-2xl text-bleu"></i>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex justify-end items-center space-x-8 text-p transition-all duration-300"
+            role="navigation"
+            id="main-nav"
+          >
+            <ul class="flex items-center space-x-6">
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Accueil</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="boutique.html">Notre boutique</a>
+              </li>
+              <li>
+                <a class="text-bleu font-bold hover:text-bleu/80 transition-colors duration-200" href="suiviIA.html">Suivi avec IA</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Télémedecine</a>
+              </li>
+              <li>
+                <a class="text-gray-800 hover:text-bleu transition-colors duration-200" href="#">Service client</a>
+              </li>
+
+              <!-- Language Dropdown -->
+              <li class="relative group">
+                <button
+                  class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="Sélectionner la langue"
+                >
+                  <i class="fas fa-globe"></i>
+                </button>
+                <div
+                  class="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-32 z-50 transform transition-all duration-200 opacity-0 group-hover:opacity-100"
+                >
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+                  <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+                </div>
+              </li>
+
+              <!-- User Icon -->
+              <li>
+                <a
+                  class="text-gray-800 hover:text-bleu transition-colors duration-200 p-1 focus:outline-none focus:ring-2 focus:ring-bleu/50 rounded"
+                  href="login.html"
+                  aria-label="Connexion"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation (Hidden by Default) -->
+      <nav
+        class="lg:hidden hidden flex-col space-y-4 text-p bg-fond shadow-inner mt-4 p-4 rounded-b-lg transition-all duration-300"
+        id="mobile-nav"
+        role="navigation"
+      >
+        <a class="text-gray-800 hover:text-bleu" href="#">Accueil</a>
+        <a class="text-gray-800 hover:text-bleu" href="boutique.html">Notre boutique</a>
+        <a class="text-bleu font-bold hover:text-bleu/80" href="suiviIA.html">Suivi avec IA</a>
+        <a class="text-gray-800 hover:text-bleu" href="#">Télémedecine</a>
+        <a class="text-gray-800 hover:text-bleu" href="#">Service client</a>
+        <div class="relative">
+          <button
+            class="text-gray-800 hover:text-bleu focus:outline-none focus:ring-2 focus:ring-bleu/50 p-1 rounded"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="Sélectionner la langue"
+            id="mobile-lang-toggle"
+          >
+            <i class="fas fa-globe mr-2"></i> Langue
+          </button>
+          <div
+            class="hidden flex-col bg-white shadow-lg rounded mt-2 py-2 w-full z-50 transition-all duration-200"
+            id="mobile-lang-menu"
+          >
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Français</a>
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">English</a>
+            <a class="block px-4 py-2 text-p text-gray-800 hover:bg-gray-100" href="#">Español</a>
+          </div>
+        </div>
+        <a class="text-gray-800 hover:text-bleu" href="login.html">
+          <i class="fas fa-user mr-2"></i> Connexion
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Script pour la navigation mobile -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const mobileNav = document.getElementById('mobile-nav');
+      mobileNav.classList.toggle('hidden');
+      mobileNav.classList.toggle('flex');
+    });
+
+    document.getElementById('mobile-lang-toggle').addEventListener('click', () => {
+      const mobileLangMenu = document.getElementById('mobile-lang-menu');
+      mobileLangMenu.classList.toggle('hidden');
+      mobileLangMenu.classList.toggle('flex');
+    });
+  </script>
+    
+    <main class="container mx-auto px-6 py-10">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold">Ajouter Réclamation</h1>
+        </div>
+        <div class="mt-6 flex justify-end">
+            <input type="text" placeholder="Recherche" class="border p-2 rounded">
+            <button class="ml-2 text-gray-600">🔍</button>
+        </div>
+        
+        <div class="mt-6 flex gap-6">
+            <aside class="bg-white p-4 rounded shadow-md w-1/4">
+                <h3 class="font-bold">Filtre</h3>
+                <label class="block mt-2"><input type="checkbox"> Non Traité</label>
+                <label class="block mt-2"><input type="checkbox"> Traité</label>
+                <label class="block mt-2"><input type="checkbox"> En Cours</label>
+            </aside>
+            
+            <section class="flex-1">
+                <div class="space-y-4">
+                    <div class="bg-gray-200 p-4 rounded flex justify-between">
+                        <span>Problème de prise de Rendez-vous</span>
+                        <span class="bg-yellow-500 w-4 h-4 rounded-full"></span>
+                    </div>
+                    <div class="bg-gray-200 p-4 rounded flex justify-between">
+                        <span>Problème de prise de Rendez-vous</span>
+                        <span class="bg-green-500 w-4 h-4 rounded-full"></span>
+                    </div>
+                    <div class="bg-gray-200 p-4 rounded flex justify-between">
+                        <span>Problème d'affichage de données</span>
+                        <span class="bg-green-500 w-4 h-4 rounded-full"></span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button class="mt-6 bg-red-500 text-white px-4 py-2 rounded">Faire une Réclamation</button>
+                  </div>
+                  
+            </section>
+        </div>
+    </main>
+    
+    *<!-- Footer -->
+    <footer class="bg-navfoohh py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-h2 font-bold text-bleuhh">À propos de Sérénis</h4>
+            <p class="text-p text-black">
+              Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile...
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
+              <a href="#"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
+              <a href="#"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
+              <a href="#"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-h2 font-bold text-bleuhh">Nos services</h4>
+            <ul class="text-p space-y-2">
+              <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
+              <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

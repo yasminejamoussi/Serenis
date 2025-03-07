@@ -544,3 +544,170 @@
   header{
     margin-bottom: 80px;
   }
+
+  .sidebar {
+    width: 250px;
+    background-color: #e5d0b5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h2, .sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li, .filter-item {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 200px;
+}
+
+.filter-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.filter-box label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter-box input, .filter-item input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.search-bar {
+    width: 100%;
+    text-align: right;
+    margin: 10px 0 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.notification {
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.blue { background-color: #3b82f6; }
+.light-blue { background-color: #a5b4fc; color: black; }
+.light-purple { background-color: #e6e6fa; }
+.red { background-color: #dc2626; }
+.light-red { background-color: #fecaca; color: black; }
+
+.icon {
+    font-size: 20px;
+}
+
+
+
+
+
+
+.graph {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.graph img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-box {
+  background: #C1B6D0;
+  padding: 20px;
+  border-radius: 10px;
+  color: #333;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-chat {
+  background: #E5C1C5;
+  color: black;
+}
+
+.btn-contact {
+  background: #B34D4D;
+  color: white;
+}
+.custom-btn {
+  background-color: #B14343;
+  border-color: #B14343;
+  color: white;
+}
+
+.custom-btn:hover {
+  background-color: #9e3c3c;
+  border-color: #9e3c3c;
+}
