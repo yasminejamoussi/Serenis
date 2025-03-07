@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <link rel="icon" type="image/png" href="images/petitlogo.png" />
+    <title>Sérénis</title>
+  </head>
+  <body class="font-sans bg-fondhh text-black">
+    <nav class="bg-navfoohh border-gray-200 shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse site-logo">
+          <img src="images/Sérénis.png" width="120" alt="Sérénis Logo" class="h-auto" />
+        </a>
+    
+        <!-- Bouton Toggle Mobile -->
+        <button
+          data-collapse-toggle="navbar-multi-level"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-bleu rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-bleu/50"
+          aria-controls="navbar-multi-level"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Ouvrir le menu principal</span>
+          <i class="fas fa-bars text-2xl text-bleu"></i>
+        </button>
+    
+        <!-- Navigation -->
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-multi-level">
+          <ul class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-fond lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-navfoohh">
+            <li>
+              <a href="index.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0" aria-current="page">Accueil</a>
+            </li>
+            <li>
+              <a href="boutique.html" class="block py-2 px-3  text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Notre boutique</a>
+            </li>
+            <li>
+              <a href="suiviIA.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Suivi avec IA</a>
+            </li>
+            <!-- Télémedecine Dropdown -->
+            <li class="relative">
+              <button
+                id="dropdownTelemedecineLink"
+                data-dropdown-toggle="dropdownTelemedecine"
+                class="flex items-center justify-between w-full py-2 px-3 text-bleuhh font-bold hover:text-bleuhh/80 focus:outline-none lg:p-0 lg:w-auto"
+              >
+                Télémedecine
+                <svg class="w-2.5 h-2.5 ms-2.5 lg:ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <div id="dropdownTelemedecine" class="z-50 hidden absolute right-0 font-normal bg-white shadow-lg rounded-lg mt-2 w-32 transition-all duration-200">
+                <ul class="py-2 text-p text-gray-800" aria-labelledby="dropdownTelemedecineLink">
+                  <li>
+                    <a href="docteurs.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Nos docteurs</a>
+                  </li>
+                  <li>
+                    <a href="RDV.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Vos rendez-vous</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Service Client Dropdown -->
+            <li class="relative">
+              <button
+                id="dropdownServiceClientLink"
+                data-dropdown-toggle="dropdownServiceClient"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh focus:outline-none lg:p-0 lg:w-auto"
+              >
+                Service client
+                <svg class="w-2.5 h-2.5 ms-2.5 lg:ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <div id="dropdownServiceClient" class="z-50 hidden absolute right-0 font-normal bg-white shadow-lg rounded-lg mt-2 w-32 transition-all duration-200">
+                <ul class="py-2 text-p text-gray-800" aria-labelledby="dropdownServiceClientLink">
+                  <li>
+                    <a href="ListeNotificationsApres.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Notification</a>
+                  </li>
+                  <li>
+                    <a href="ListeReclamationsApres.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Réclamation</a>
+                  </li>
+                  <li>
+                    <a href="DetailsAlerteApres.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Alerte</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Language Dropdown -->
+            <li class="relative mt-1">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh  lg:p-0 lg:w-auto"
+              >
+                <i class="fas fa-globe mr-2 lg:mr-0"></i>
+                <span class="lg:hidden">Langue</span>
+              </button>
+              <div id="dropdownNavbar" class="z-50 hidden absolute right-0 font-normal bg-white shadow-lg rounded-lg mt-2 w-32 transition-all duration-200">
+                <ul class="py-2 text-p text-gray-800" aria-labelledby="dropdownNavbarLink">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Français</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">English</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-bleuhh">Español</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- User Icon -->
+            <li>
+              <a
+                href=""
+                class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0 focus:outline-none focus:ring-2 focus:ring-bleuhh/50"
+                aria-label="Connexion"
+              >
+                <i class="fas fa-user mr-2 lg:mr-0"></i>
+                <span class="lg:hidden">Connexion</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+        <!-- Breadcrumb -->
+        <section class="bg-fondhh py-2">
+            <div class="container mx-auto px-4">
+                <p class="text-small text-gray-600">Télémédecine > Nos Docteurs</p>
+            </div>
+        </section>
+
+        <!-- Contenu principal -->
+        <section class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-6">
+            <!-- Sidebar filtres -->
+            <aside class="w-full md:w-1/5 mt-10">
+                <h3 class="text-h3 font-semibold text-black mb-4">Filtre</h3>
+                <button class="w-full bg-white hover:bg-orangehh text-gray-700 py-2 px-4 rounded mb-2 flex items-center border border-gray-300 shadow-lg">
+                    <i class="fas fa-sort-alpha-down mr-2"></i> Alphabétiquement
+                </button>
+                <button class="w-full bg-white hover:bg-orangehh text-gray-700 py-2 px-4 rounded mb-2 flex items-center border border-gray-300 shadow-lg">
+                    <i class="fas fa-star mr-2"></i> Favoris
+                </button>
+                <select class="w-full bg-white border rounded py-2 px-3 mb-2 text-p text-gray-700 border-gray-300 shadow-lg">
+                    <option>Spécialité</option>
+                </select>
+                <div class="flex gap-2">
+                    <button class="flex-1 bg-white hover:bg-verthh py-2 rounded flex items-center justify-center border border-gray-300 shadow-lg">
+                        <i class="fas fa-mars mr-1"></i> ♂
+                    </button>
+                    <button class="flex-1 bg-white hover:bg-verthh py-2 rounded flex items-center justify-center border border-gray-300 shadow-lg">
+                        <i class="fas fa-venus mr-1"></i> ♀
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Liste docteurs -->
+            <section class="w-full md:w-4/5">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-h2 font-bold text-black text-center w-full">Nos Docteurs</h2>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="Recherche" class="border rounded-l py-2 px-4 text-p w-64">
+                        <button class="bg-gray-200 hover:bg-orangehh py-2 px-4 rounded-r flex items-center">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Ligne 1 - Carte Dr. Fatma Loukil -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg flex items-center border border-gray-300">
+                        <div class="flex flex-col items-start">
+                            <img src="images/staff_7.png" alt="Dr. Mohammed Loukil" class="w-24 h-24 rounded-full mb-2">
+                            <a href="#" class="text-p text-orangehh hover:text-bleuhh cursor-pointer underline decoration-orangehh">Ajouter aux Favoris</a>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-h3 font-semibold"><a href="#" class="text-bleuhh hover:underline">Dr. Mohammed Loukil</a></h3>
+                            <p class="text-p text-gray-600">Dermato-génétique</p>
+                            <div class="flex items-center mt-2 justify-end">
+                                <img src="images/etoiles.png" alt="Étoiles" class="h-20 mr-2">
+                                <button class="bg-orangehh hover:bg-bleuhh text-white py-2 px-4 rounded text-p"><a href="detailsdr.html">Détails</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ligne 1 - Carte Dr. Wafa Jribi -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg flex items-center border border-gray-300">
+                        <div class="flex flex-col items-start">
+                            <img src="images/staff_6.png" alt="Dr. Hsan Jribi" class="w-24 h-24 rounded-full mb-2">
+                            <a href="#" class="text-p text-orangehh hover:text-bleuhh cursor-pointer underline decoration-orangehh">Ajouter aux Favoris</a>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-h3 font-semibold"><a href="#" class="text-bleuhh hover:underline">Dr. Hsan Jribi</a></h3>
+                            <p class="text-p text-gray-600">Cardiologue</p>
+                            <div class="flex items-center mt-2 justify-end">
+                                <img src="images/etoiles.png" alt="Étoiles" class="h-20 mr-2">
+                                <button class="bg-orangehh hover:bg-bleuhh text-white py-2 px-4 rounded text-p"><a href="detailsdr.html">Détails</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ligne 2 - Carte Dr. Hadj Ali -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg flex items-center border border-gray-300">
+                        <div class="flex flex-col items-start">
+                            <img src="images/staff_9.png" alt="Dr. Hadj Ali" class="w-24 h-24 rounded-full mb-2">
+                            <a href="#" class="text-p text-orangehh hover:text-bleuhh cursor-pointer underline decoration-orangehh">Ajouter aux Favoris</a>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-h3 font-semibold"><a href="#" class="text-bleuhh hover:underline">Dr. Hadj Ali</a></h3>
+                            <p class="text-p text-gray-600">Gynécologue</p>
+                            <div class="flex items-center mt-2 justify-end">
+                                <img src="images/etoiles.png" alt="Étoiles" class="h-20 mr-2">
+                                <button class="bg-orangehh hover:bg-bleuhh text-white py-2 px-4 rounded text-p"><a href="detailsdr.html">Détails</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ligne 2 - Carte Dr. Yassine Fraoua -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg flex items-center border border-gray-300">
+                        <div class="flex flex-col items-start">
+                            <img src="images/staff_3.jpg" alt="Dr. Yassine Fraoua" class="w-24 h-24 rounded-full mb-2">
+                            <a href="#" class="text-p text-orangehh hover:text-bleuhh cursor-pointer underline decoration-orangehh">Ajouter aux Favoris</a>
+                        </div>
+                        <div class="flex-1 ml-4">
+                            <h3 class="text-h3 font-semibold"><a href="#" class="text-bleuhh hover:underline">Dr. Yasmine Aloui</a></h3>
+                            <p class="text-p text-gray-600">Orthopédiste</p>
+                            <div class="flex items-center mt-2 justify-end">
+                                <img src="images/etoiles.png" alt="Étoiles" class="h-20 mr-2">
+                                <button class="bg-orangehh hover:bg-bleuhh text-white py-2 px-4 rounded text-p"><a href="detailsdr.html">Détails</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+
+
+      
+    <!-- Footer -->
+    <footer class="bg-navfoohh py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <!-- Section À propos de Sérénis, prend 5/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-5 space-y-4">
+              <h4 class="text-h2 font-bold">À propos de Sérénis</h4>
+              <p class="text-p text-black">
+                Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée.
+              </p>
+              <div class="flex space-x-4 mt-4">
+                <a href="www.facebook.com"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
+                <a href="www.instagram.com"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
+                <a href="www.twitter.com"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
+                <a href="www.tiktok.com"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+              </div>
+            </div>
+  
+            <!-- Section Nos services, prend 3/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-3">
+              <h4 class="text-h2 font-bold">Nos services</h4>
+              <ul class="text-p space-y-2">
+                <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
+              </ul>
+            </div>
+  
+            <!-- Section Logo, prend 4/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-4 flex items-center justify-center">
+              <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+   <!-- Script pour la navigation mobile -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+  
+    </body>
+  </html>

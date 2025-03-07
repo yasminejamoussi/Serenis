@@ -130,98 +130,85 @@
       </div>
     </nav>
 
+    <!-- Main Section -->
 
-    <!-- Breadcrumb -->
-    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
-      <div class="container mx-auto px-4">
+    <!-- Cadre vert en haut avec le chemin et le titre -->
+    <div class="bg-verthh">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
         <nav aria-label="breadcrumb">
-          <ol class="flex flex-wrap space-x-2 text-p ">
-            <li><a href="#" class="hover:text-orangehh">Suivi avec IA</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Score de santé</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Bilan</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Taux de Calcium</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Nos recettes</a></li>
-            <li>></li>
-            <li class="text-black">Détails de la recette</li>
+          <ol class="flex space-x-2 text-white text-p">
+            <li><a href="suiviIA.html" class="hover:text-bleu">Suivi avec IA ></a></li>
+            <li><a href="#" class="hover:text-bleu">Score de santé ></a></li>
+            <li><a href="DetailsBilan.html" class="hover:text-bleu">Bilan ></a></li>
+            <li class="text-gray-300" aria-current="page">Taux de Calcium</li>
           </ol>
         </nav>
+        <br />
+        <h1 class="text-h1 font-bold text-white">Taux de Calcium</h1>
       </div>
     </div>
+    <br /><br />
 
-    <!-- Main Section -->
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center flex-col lg:flex-row">
-        <h1 class="text-h1 font-bold ">Détails de la Recette</h1>
-        <div class="flex items-center mt-4 lg:mt-0">
-          <input type="text" class="border border-gray-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
-          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
+    <!-- Contenu principal -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Section Résultat (cadre blanc) -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex justify-between items-start">
+            <!-- Partie gauche -->
+            <div>
+              <h2 class="text-h2 font-semibold">Votre résultat :</h2>
+              <h4 class="text-h2 font-bold">8,3 mg/dl</h4>
+              <p class="text-p mt-2">
+                <strong>Valeur normale :</strong> <span class="text-gray-700">8,8 - 10,6 mg/dl</span>
+              </p>
+            </div>
 
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="col-span-1">
-          <img src="images/croissant.jpg" alt="Croissant au saumon et à l'œuf poché" class="w-full rounded-lg" />
+            <!-- Partie droite (Icône et barre rouge) -->
+            <div class="flex flex-col items-center">
+              <img src="images/os.png" alt="Icône d'os" width="80px" class="mb-2" />
+              <div class="w-16 h-2 mt-4 bg-red-600 rounded"></div>
+            </div>
+          </div>
+
+          <!-- Graphique en dessous -->
+          <img src="images/graphe.jpg" alt="Graphe de votre taux de Calcium" class="mt-4 w-full" />
         </div>
-        <div class="col-span-1">
-          <h1 class="text-h1 ">Croissant au saumon et à l'œuf poché</h1>
-          <p class="text-p  mt-2">
-            <span class="mr-4"><i class="fa fa-clock mr-1"></i> 15 Min</span>
-            <span class="mr-4"><i class="fa fa-fire mr-1"></i> 220 Cal</span>
-            <span><i class="fa fa-check mr-1"></i> Facile</span>
+
+        <!-- Section Explication (à droite) -->
+        <div class=" p-6">
+          <h2 class="text-h2 font-bold pb-4">Le test calcium sérique</h2>
+          <p class="text-p mt-2 text-gray-700">
+            Le test calcium sérique mesure les formes libres et liées du calcium dans le sang. Des niveaux anormaux (trop élevés ou trop faibles) peuvent indiquer des troubles comme :
           </p>
-        </div>
-        <div class="col-span-1">
-         
-          <div class="border-2 border-verthh bg-verthh p-4 rounded-lg">
-            <h2 class="text-h2 text-white">Ingrédients</h2>
-            <br>
-            <ul class="text-p space-y-2">
-              <li class="flex justify-between text-white"><span>Croissant</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Oeuf</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Saumon</span><span>100 g</span></li>
-              <li class="flex justify-between text-white"><span>Concombre</span><span>1/4</span></li>
-              <li class="flex justify-between text-white"><span>Fromage Blanc</span><span>20 g</span></li>
-              <li class="flex justify-between text-white"><span>Poivre et Sel</span><span>1 pincée</span></li>
-              <li class="flex justify-between text-white"><span>Aneth</span><span>1 brin</span></li>
-            </ul>
+          <ul class="text-p mt-2 space-y-2 text-gray-700">
+            <li><strong>Faible calcium :</strong> Problème d'absorption, maladies osseuses, rénales ou hépatiques.</li>
+            <li><strong>Calcium élevé :</strong> Favorisez les aliments riches en calcium (produits laitiers, légumes verts).</li>
+          </ul>
+          <p class="text-p mt-2 text-gray-700">
+            <strong>Amélioration de la santé :</strong> Favorisez les aliments riches en calcium (produits laitiers, légumes verts).
+          </p>
+          <p class="text-p mt-2 text-gray-700 pb-4">Consultez un médecin pour envisager des suppléments si nécessaire.</p>
+
+          <!-- Boutons d'action -->
+   
+          
+          <div class="mt-4 flex justify-end space-x-4">
+            <a href="suiviIA.html"
+              class="border-2 border-orangehh text-orangehh px-6 py-2 rounded-lg hover:bg-orangehh/10  font-medium transition-colors duration-200"
+            >
+            Retourner au bilan
+
+            </a>
+            <a href="DetailsRecette.html"
+              class="bg-orangehh text-navfoohh px-6 py-2 rounded-lg hover:bg-orangehh/80  font-medium transition-colors duration-200"
+            >
+            Conseils Nutritionnels
+            </a>
           </div>
         </div>
       </div>
-
-      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
-          <iframe
-            class="w-full h-[385px] rounded-lg"
-            src="https://www.youtube.com/embed/Z_Le6jBg21I?si=oyXaQlaa3dax1WIG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <h2 class="text-h2 ">Recette</h2>
-          <br>
-          <ol class="list-decimal text-p pl-5 space-y-2 text-black">
-            <li>Tartiner le croissant de fromage à la crème</li>
-            <li>Disposer dessus les tranches de saumon</li>
-            <li>Ajouter du sel à l’eau bouillante</li>
-            <li>Faire cuire l'œuf pendant 1.5 minutes</li>
-            <li>Placer l'œuf poché dans une assiette, saupoudrer de mélange de graines ou de micropousses</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    
+    </main>
 
     <!-- Footer -->
     <footer class="bg-navfoohh py-8">
@@ -262,5 +249,6 @@
 
    <!-- Script pour la navigation mobile -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
   </body>
 </html>

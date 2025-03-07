@@ -39,7 +39,7 @@
               <a href="boutique.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Notre boutique</a>
             </li>
             <li>
-              <a href="suiviIA.html" class="block py-2 px-3 text-bleuhh font-bold hover:text-bleuhh/80 transition-colors duration-200 lg:p-0">Suivi avec IA</a>
+              <a href="suiviIA.html" class="block py-2 px-3  text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Suivi avec IA</a>
             </li>
             <!-- Télémedecine Dropdown -->
             <li class="relative">
@@ -69,7 +69,7 @@
               <button
                 id="dropdownServiceClientLink"
                 data-dropdown-toggle="dropdownServiceClient"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh focus:outline-none lg:p-0 lg:w-auto"
+                class="flex items-center justify-between w-full py-2 px-3 text-bleuhh font-bold hover:text-bleuhh/80 focus:outline-none lg:p-0 lg:w-auto"
               >
                 Service client
                 <svg class="w-2.5 h-2.5 ms-2.5 lg:ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -95,7 +95,7 @@
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh  lg:p-0 lg:w-auto"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh focus:outline-none focus:ring-2 focus:ring-bleuhh/50 lg:p-0 lg:w-auto"
               >
                 <i class="fas fa-globe mr-2 lg:mr-0"></i>
                 <span class="lg:hidden">Langue</span>
@@ -129,138 +129,91 @@
         </div>
       </div>
     </nav>
-
-
-    <!-- Breadcrumb -->
-    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
-      <div class="container mx-auto px-4">
-        <nav aria-label="breadcrumb">
-          <ol class="flex flex-wrap space-x-2 text-p ">
-            <li><a href="#" class="hover:text-orangehh">Suivi avec IA</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Score de santé</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Bilan</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Taux de Calcium</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Nos recettes</a></li>
-            <li>></li>
-            <li class="text-black">Détails de la recette</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Main Section -->
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center flex-col lg:flex-row">
-        <h1 class="text-h1 font-bold ">Détails de la Recette</h1>
-        <div class="flex items-center mt-4 lg:mt-0">
-          <input type="text" class="border border-gray-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
-          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="col-span-1">
-          <img src="images/croissant.jpg" alt="Croissant au saumon et à l'œuf poché" class="w-full rounded-lg" />
-        </div>
-        <div class="col-span-1">
-          <h1 class="text-h1 ">Croissant au saumon et à l'œuf poché</h1>
-          <p class="text-p  mt-2">
-            <span class="mr-4"><i class="fa fa-clock mr-1"></i> 15 Min</span>
-            <span class="mr-4"><i class="fa fa-fire mr-1"></i> 220 Cal</span>
-            <span><i class="fa fa-check mr-1"></i> Facile</span>
-          </p>
-        </div>
-        <div class="col-span-1">
-         
-          <div class="border-2 border-verthh bg-verthh p-4 rounded-lg">
-            <h2 class="text-h2 text-white">Ingrédients</h2>
-            <br>
-            <ul class="text-p space-y-2">
-              <li class="flex justify-between text-white"><span>Croissant</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Oeuf</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Saumon</span><span>100 g</span></li>
-              <li class="flex justify-between text-white"><span>Concombre</span><span>1/4</span></li>
-              <li class="flex justify-between text-white"><span>Fromage Blanc</span><span>20 g</span></li>
-              <li class="flex justify-between text-white"><span>Poivre et Sel</span><span>1 pincée</span></li>
-              <li class="flex justify-between text-white"><span>Aneth</span><span>1 brin</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
-          <iframe
-            class="w-full h-[385px] rounded-lg"
-            src="https://www.youtube.com/embed/Z_Le6jBg21I?si=oyXaQlaa3dax1WIG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <h2 class="text-h2 ">Recette</h2>
-          <br>
-          <ol class="list-decimal text-p pl-5 space-y-2 text-black">
-            <li>Tartiner le croissant de fromage à la crème</li>
-            <li>Disposer dessus les tranches de saumon</li>
-            <li>Ajouter du sel à l’eau bouillante</li>
-            <li>Faire cuire l'œuf pendant 1.5 minutes</li>
-            <li>Placer l'œuf poché dans une assiette, saupoudrer de mélange de graines ou de micropousses</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    
-
-    <!-- Footer -->
-    <footer class="bg-navfoohh py-8">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
-          <!-- Section À propos de Sérénis, prend 5/12 de l'espace sur les grands écrans -->
-          <div class="lg:col-span-5 space-y-4">
-            <h4 class="text-h2 font-bold">À propos de Sérénis</h4>
-            <p class="text-p text-black">
-              Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée.
-            </p>
-            <div class="flex space-x-4 mt-4">
-              <a href="www.facebook.com"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
-              <a href="www.instagram.com"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
-              <a href="www.twitter.com"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
-              <a href="www.tiktok.com"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+   
+    <main class="container mx-auto px-4 my-8 m-4">
+        <h1 class="text-center text-h1 font-bold">Liste Des Notifications</h1>
+        <div class="grid grid-cols-4 gap-6 mt-6">
+          <aside class="col-span-1 bg-white p-4 shadow-md rounded-lg">
+            <h2 class="font-bold text-lg">Filtre</h2>
+            <div class="mt-2 space-y-2">
+              <label class="flex items-center"><input type="checkbox" class="mr-2"> Rappels Médicaments</label>
+              <label class="flex items-center"><input type="checkbox" class="mr-2"> Alertes De Santé</label>
+              <label class="flex items-center"><input type="checkbox" class="mr-2"> Rappels Rendez-Vous</label>
+            </div>
+          </aside>
+          <div class="col-span-3">
+            <input type="text" placeholder="Recherche..." class="w-full px-4 py-2 border rounded-lg">
+            <div class="mt-4 space-y-4">
+              <div class="bg-blue-100 p-4 rounded-lg flex items-center">
+                <i class="fas fa-pills text-blue-500 mr-3"></i>
+                <span>Rappel de prise de médicaments: Styinox 1 dose à prendre à 22:00</span>
+              </div>
+              <div class="bg-red-100 p-4 rounded-lg flex items-center">
+                <i class="fas fa-exclamation-triangle text-red-500 mr-3"></i>
+                <span>Alerte pression artérielle anormale. Contactez votre médecin.</span>
+              </div>
+              <div class="bg-red-100 p-4 rounded-lg flex items-center">
+                  <i class="fas fa-exclamation-triangle text-red-500 mr-3"></i>
+                  <span>Attention ! Il est l’heure de prendre votre médicament contre l’hypertension.</span>
+                </div>
+              <div class="bg-blue-100 p-4 rounded-lg flex items-center shadow-md border border-blue-300">
+                  <div class="bg-red-500 text-white p-2 rounded-full flex items-center justify-center w-5 h-5">
+                    <i class="fas fa-bell text-lg"></i>
+                  </div>
+                  <span class="ml-3 text-gray-700">Rappel: Vous avez un rendez-vous avec votre docteur. Dr Wael Keila, préparez-vous à le rejoindre.</span>
+                </div>
+                
+                
             </div>
           </div>
+        </div>
+      </main>
 
-          <!-- Section Nos services, prend 3/12 de l'espace sur les grands écrans -->
-          <div class="lg:col-span-3">
-            <h4 class="text-h2 font-bold">Nos services</h4>
-            <ul class="text-p space-y-2">
-              <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
-              <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
-              <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
-              <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
-            </ul>
-          </div>
 
-          <!-- Section Logo, prend 4/12 de l'espace sur les grands écrans -->
-          <div class="lg:col-span-4 flex items-center justify-center">
-            <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+
+
+
+      
+    <!-- Footer -->
+    <footer class="bg-navfoohh py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <!-- Section À propos de Sérénis, prend 5/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-5 space-y-4">
+              <h4 class="text-h2 font-bold">À propos de Sérénis</h4>
+              <p class="text-p text-black">
+                Sérénis est une plateforme dédiée à l'amélioration de la qualité de vie des seniors, offrant des services comme des soins médicaux à domicile, des transports adaptés, de la télémédecine, et plus encore. Notre objectif est d'accompagner chaque senior dans sa vie quotidienne pour lui offrir une existence sereine et bien accompagnée.
+              </p>
+              <div class="flex space-x-4 mt-4">
+                <a href="www.facebook.com"><img src="images/facebook.png" alt="Facebook" class="w-[30px]" /></a>
+                <a href="www.instagram.com"><img src="images/instagram.png" alt="Instagram" class="w-[30px]" /></a>
+                <a href="www.twitter.com"><img src="images/twitter.png" alt="Twitter" class="w-[30px]" /></a>
+                <a href="www.tiktok.com"><img src="images/tiktok.png" alt="Tiktok" class="w-[30px]" /></a>
+              </div>
+            </div>
+  
+            <!-- Section Nos services, prend 3/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-3">
+              <h4 class="text-h2 font-bold">Nos services</h4>
+              <ul class="text-p space-y-2">
+                <li><a href="#" class="text-black hover:text-orangehh">Soins Médicaux à Domicile</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Transport Médical Adapté</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Plateforme de Télémédecine</a></li>
+                <li><a href="#" class="text-black hover:text-orangehh">Calendrier d'Activités Sociales</a></li>
+              </ul>
+            </div>
+  
+            <!-- Section Logo, prend 4/12 de l'espace sur les grands écrans -->
+            <div class="lg:col-span-4 flex items-center justify-center">
+              <img src="images/Sérénis.png" alt="Logo Sérénis" class="w-[320px]" />
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-
+      </footer>
+  
+  
    <!-- Script pour la navigation mobile -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-  </body>
-</html>
+  
+    </body>
+  </html>

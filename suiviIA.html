@@ -130,99 +130,100 @@
       </div>
     </nav>
 
-
-    <!-- Breadcrumb -->
-    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
-      <div class="container mx-auto px-4">
-        <nav aria-label="breadcrumb">
-          <ol class="flex flex-wrap space-x-2 text-p ">
-            <li><a href="#" class="hover:text-orangehh">Suivi avec IA</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Score de santé</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Bilan</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Taux de Calcium</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Nos recettes</a></li>
-            <li>></li>
-            <li class="text-black">Détails de la recette</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Main Section -->
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center flex-col lg:flex-row">
-        <h1 class="text-h1 font-bold ">Détails de la Recette</h1>
-        <div class="flex items-center mt-4 lg:mt-0">
-          <input type="text" class="border border-gray-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
-          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="col-span-1">
-          <img src="images/croissant.jpg" alt="Croissant au saumon et à l'œuf poché" class="w-full rounded-lg" />
-        </div>
-        <div class="col-span-1">
-          <h1 class="text-h1 ">Croissant au saumon et à l'œuf poché</h1>
-          <p class="text-p  mt-2">
-            <span class="mr-4"><i class="fa fa-clock mr-1"></i> 15 Min</span>
-            <span class="mr-4"><i class="fa fa-fire mr-1"></i> 220 Cal</span>
-            <span><i class="fa fa-check mr-1"></i> Facile</span>
-          </p>
-        </div>
-        <div class="col-span-1">
-         
-          <div class="border-2 border-verthh bg-verthh p-4 rounded-lg">
-            <h2 class="text-h2 text-white">Ingrédients</h2>
-            <br>
-            <ul class="text-p space-y-2">
-              <li class="flex justify-between text-white"><span>Croissant</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Oeuf</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Saumon</span><span>100 g</span></li>
-              <li class="flex justify-between text-white"><span>Concombre</span><span>1/4</span></li>
-              <li class="flex justify-between text-white"><span>Fromage Blanc</span><span>20 g</span></li>
-              <li class="flex justify-between text-white"><span>Poivre et Sel</span><span>1 pincée</span></li>
-              <li class="flex justify-between text-white"><span>Aneth</span><span>1 brin</span></li>
-            </ul>
+    <!-- Main Content -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <div class="header">
+        <div class="container mx-auto px-4">
+          <nav aria-label="breadcrumb">
+            <ol class="flex space-x-2 text-gray-600 text-p">
+              <li><a href="suiviIA.html">Suivi avec IA</a></li>
+            </ol>
+          </nav>
+          <div class="flex justify-between items-center mt-4 mb-6">
+            <h1 class="text-h1 font-bold">Bilan Quotidien</h1>
+            <button class="text-navfoohh px-6 py-2 rounded-lg bg-orangehh text-small font-medium transition-colors duration-200">
+              <a href="DetailsBilan.html">Télécharger Rapport de santé</a> 
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
-          <iframe
-            class="w-full h-[385px] rounded-lg"
-            src="https://www.youtube.com/embed/Z_Le6jBg21I?si=oyXaQlaa3dax1WIG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <h2 class="text-h2 ">Recette</h2>
-          <br>
-          <ol class="list-decimal text-p pl-5 space-y-2 text-black">
-            <li>Tartiner le croissant de fromage à la crème</li>
-            <li>Disposer dessus les tranches de saumon</li>
-            <li>Ajouter du sel à l’eau bouillante</li>
-            <li>Faire cuire l'œuf pendant 1.5 minutes</li>
-            <li>Placer l'œuf poché dans une assiette, saupoudrer de mélange de graines ou de micropousses</li>
-          </ol>
+      <div class="container mx-auto px-4 pb-5">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Heart Rate Card -->
+          <div class="bg-bleuhh text-white p-6 rounded-lg shadow-lg min-h-[400px] flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <i class="fas fa-heartbeat text-3xl"></i>
+                <h4 class="text-h2 font-semibold">Fréquence Cardiaque</h4>
+              </div>
+              <img src="images/courbe.png" alt="Heart Rate Curve" class="mt-4 w-full max-w-[400px]" />
+            </div>
+            <h5 class="text-h3 mt-4 text-center">BPM 102</h5>
+          </div>
+
+          <!-- Right Column -->
+          <div class="lg:col-span-2 space-y-6">
+            <!-- Top Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[200px]">
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full">
+                <h4 class="text-h2 font-semibold mb-2">Activité récente</h4>
+                <div class="flex flex-col space-y-2 text-p">
+                  <p><i class="fa-solid fa-map-pin mr-2"></i> 1 km</p>
+                  <p><i class="fas fa-clock mr-2"></i> 35min 33 sec</p>
+                  <p><i class="fa-solid fa-fire mr-2"></i> 114 calories</p>
+                </div>
+              </div>
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full text-center">
+                <i class="fas fa-walking text-3xl mb-2"></i>
+                <h4 class="text-h2 font-semibold mb-2">Marche</h4>
+                <h5 class="text-h3">2850 pas</h5>
+              </div>
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full text-center">
+                <i class="fas fa-tint text-3xl mb-2"></i>
+                <h4 class="text-h2 font-semibold mb-2">Eau</h4>
+                <h5 class="text-h3">1.55 Litres</h5>
+              </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[200px]">
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full text-center">
+                <i class="fas fa-bed text-3xl mb-2"></i>
+                <h4 class="text-h2 font-semibold mb-2">Sommeil</h4>
+                <h5 class="text-h3">6.33 Heures</h5>
+              </div>
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full">
+                <h4 class="text-h2 font-semibold mb-2">Nourritures</h4>
+                <div class="flex flex-col space-y-2 text-p">
+                  <div class="flex justify-between">
+                    <p>Glucides:</p>
+                    <p>180 g</p>
+                  </div>
+                  <div class="flex justify-between">
+                    <p>Lipides:</p>
+                    <p>50 g</p>
+                  </div>
+                  <div class="flex justify-between">
+                    <p>Protéines:</p>
+                    <p>38 g</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-bleuhh text-white p-4 rounded-lg shadow-lg flex flex-col justify-between h-full text-center">
+                <i class="fas fa-bell text-3xl mb-2"></i>
+                <button class="border-2 mb-6 border-orangehh text-orangehh px-6 py-2 rounded-lg bg-fondhh mt-2 text-small font-medium transition-colors duration-200">
+                  Ajouter un rappel de Médicament
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
     
-
+    
     <!-- Footer -->
     <footer class="bg-navfoohh py-8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

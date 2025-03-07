@@ -36,17 +36,17 @@
               <a href="index.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0" aria-current="page">Accueil</a>
             </li>
             <li>
-              <a href="boutique.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Notre boutique</a>
+              <a href="boutique.html" class="block py-2 px-3  text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Notre boutique</a>
             </li>
             <li>
-              <a href="suiviIA.html" class="block py-2 px-3 text-bleuhh font-bold hover:text-bleuhh/80 transition-colors duration-200 lg:p-0">Suivi avec IA</a>
+              <a href="suiviIA.html" class="block py-2 px-3 text-gray-800 hover:text-bleuhh transition-colors duration-200 lg:p-0">Suivi avec IA</a>
             </li>
             <!-- Télémedecine Dropdown -->
             <li class="relative">
               <button
                 id="dropdownTelemedecineLink"
                 data-dropdown-toggle="dropdownTelemedecine"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:text-bleuhh focus:outline-none lg:p-0 lg:w-auto"
+                class="flex items-center justify-between w-full py-2 px-3 text-bleuhh font-bold hover:text-bleuhh/80 focus:outline-none lg:p-0 lg:w-auto"
               >
                 Télémedecine
                 <svg class="w-2.5 h-2.5 ms-2.5 lg:ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -131,98 +131,103 @@
     </nav>
 
 
-    <!-- Breadcrumb -->
-    <div class="bg-fondhh py-4 max-w-7xl mx-auto">
-      <div class="container mx-auto px-4">
-        <nav aria-label="breadcrumb">
-          <ol class="flex flex-wrap space-x-2 text-p ">
-            <li><a href="#" class="hover:text-orangehh">Suivi avec IA</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Score de santé</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Bilan</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Taux de Calcium</a></li>
-            <li>></li>
-            <li><a href="#" class="hover:text-orangehh">Nos recettes</a></li>
-            <li>></li>
-            <li class="text-black">Détails de la recette</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
 
-    <!-- Main Section -->
-    <section class="max-w-7xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center flex-col lg:flex-row">
-        <h1 class="text-h1 font-bold ">Détails de la Recette</h1>
-        <div class="flex items-center mt-4 lg:mt-0">
-          <input type="text" class="border border-gray-500 rounded-l-md px-4 py-2 text-p focus:outline-none" placeholder="Rechercher..." />
-          <button class="bg-gray-500 text-white px-4 py-2 rounded-r-md hover:bg-orangehh">
-            <i class="fas fa-search"></i>
-          </button>
+    <!-- Main Content -->
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <!-- Breadcrumb -->
+      <div class="py-2">
+        <div class="container mx-auto px-4">
+          <nav aria-label="breadcrumb">
+            <ol class="flex space-x-2 text-gray-600 text-p">
+              <li>
+                <a href="Télémédecine.html" class="hover:text-bleu">Télémedecine</a> >
+              </li>
+              <li>
+                <a href="Télémédecine.html" class="hover:text-bleu">Nos docteurs</a> >
+              </li>
+              <li>
+                <a href="boutique.html" class="hover:text-bleu">Détails du docteur</a> >
+              </li>
+              <li class="hover:text-bleu" aria-current="page">Prendre un rendez-vous</a> >
+              </li>
+              <li class="text-gray-600">Mes rendez-vous</li>
+            </ol>
+          </nav>
         </div>
       </div>
 
-      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="col-span-1">
-          <img src="images/croissant.jpg" alt="Croissant au saumon et à l'œuf poché" class="w-full rounded-lg" />
+      <!-- Title -->
+      <div class="mb-6">
+        <h1 class="text-h1 font-bold text-gray-900">Détails du rendez-vous</h1>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <!-- Card with Doctor Details -->
+<div>
+    <div class="bg-bleuhh rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center text-white h-96">
+      <!-- Doctor Image -->
+      <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+        <img 
+          src="./images/staff_11.png" 
+          alt="Dr. Mounir Ben Abdallah" 
+          class="w-64 h-64 object-cover rounded-md"
+        />
+      </div>
+      
+      <!-- Doctor Information -->
+      <div class="flex-1 flex flex-col justify-center space-y-4 gap-4">
+        <!-- Header Section -->
+        <div>
+          <h5 class="text-h3 font-semibold mb-2">Dr. Mounir Ben Abdallah</h5>
+          <p class="text-p text-gray-200">Dermato-génétique</p>
         </div>
-        <div class="col-span-1">
-          <h1 class="text-h1 ">Croissant au saumon et à l'œuf poché</h1>
-          <p class="text-p  mt-2">
-            <span class="mr-4"><i class="fa fa-clock mr-1"></i> 15 Min</span>
-            <span class="mr-4"><i class="fa fa-fire mr-1"></i> 220 Cal</span>
-            <span><i class="fa fa-check mr-1"></i> Facile</span>
-          </p>
+  
+        <!-- Experience Badge -->
+        <div class="bg-yellow-400 text-gray-900 p-2 rounded-md inline-flex items-center w-fit">
+          <i class="fas fa-star mr-2"></i>
+          <span>15 ans d'expérience</span>
         </div>
-        <div class="col-span-1">
-         
-          <div class="border-2 border-verthh bg-verthh p-4 rounded-lg">
-            <h2 class="text-h2 text-white">Ingrédients</h2>
-            <br>
-            <ul class="text-p space-y-2">
-              <li class="flex justify-between text-white"><span>Croissant</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Oeuf</span><span>1 pièce</span></li>
-              <li class="flex justify-between text-white"><span>Saumon</span><span>100 g</span></li>
-              <li class="flex justify-between text-white"><span>Concombre</span><span>1/4</span></li>
-              <li class="flex justify-between text-white"><span>Fromage Blanc</span><span>20 g</span></li>
-              <li class="flex justify-between text-white"><span>Poivre et Sel</span><span>1 pincée</span></li>
-              <li class="flex justify-between text-white"><span>Aneth</span><span>1 brin</span></li>
-            </ul>
+  
+        <!-- Contact Information -->
+        <div class="bg-fondhh text-gray-900 p-3 rounded-md">
+            <P class="pb-4 font-bold">Contact :</P>
+           
+          <div class="flex items-center mb-2">
+            <i class="fas fa-phone mr-2"></i>
+            <span>71 000 000</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope mr-2"></i>
+            <span>mounir.ba@gmail.com</span>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+<!-- Explanation Section -->
+<div>
+    <div class="p-6">
+      <p class="text-p text-gray-700">
+        Le 23 Avril vous avez un rendez-vous avec votre Dermato-génétique Dr. Mounir Ben Abdallah au cours du quel il abordera votre suivi médical et discutera des éventuels ajustements nécessaires.
+      </p>
+      <h4 class="text-h3 font-semibold mt-4">Heure du rendez-vous</h4>
+      <p class="text-p text-gray-700">23 Avril 2025 à 9:00</p>
+      <h4 class="text-h3 font-semibold mt-4">Adresse</h4>
+      <p class="text-p text-gray-700">2 Rue des oliviers, 2400 Tunis</p>
+    </div>
+    <div class="text-center mt-4 space-x-2">
+      <button class="bg-orangehh text-navfoohh px-4 py-2 rounded-full text-small font-medium transition-colors duration-200">
+        Appeler le médecin
+      </button>
+     <a href="RDV.html"><button class="border-2 border-orangehh text-orangehh px-4 py-2 rounded-full bg-fondhh hover:bg-orangehh hover:text-white text-small font-medium transition-colors duration-200">
+        Retourner à la liste
+      </button></a>
+    </div>
+  </div>
+  </div>
+  </main>
 
-      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div>
-          <iframe
-            class="w-full h-[385px] rounded-lg"
-            src="https://www.youtube.com/embed/Z_Le6jBg21I?si=oyXaQlaa3dax1WIG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div>
-          <h2 class="text-h2 ">Recette</h2>
-          <br>
-          <ol class="list-decimal text-p pl-5 space-y-2 text-black">
-            <li>Tartiner le croissant de fromage à la crème</li>
-            <li>Disposer dessus les tranches de saumon</li>
-            <li>Ajouter du sel à l’eau bouillante</li>
-            <li>Faire cuire l'œuf pendant 1.5 minutes</li>
-            <li>Placer l'œuf poché dans une assiette, saupoudrer de mélange de graines ou de micropousses</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    
-
+   
     <!-- Footer -->
     <footer class="bg-navfoohh py-8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -262,5 +267,6 @@
 
    <!-- Script pour la navigation mobile -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
   </body>
 </html>
